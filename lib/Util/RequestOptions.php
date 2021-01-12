@@ -80,6 +80,9 @@ class RequestOptions
             if (array_key_exists('idempotency_key', $options)) {
                 $headers['Idempotency-Key'] = $options['idempotency_key'];
             }
+            if (array_key_exists('octobat_account', $options)) {
+                $headers['Octobat-Account'] = $options['octobat_account'];
+            }
             if (array_key_exists('octobat_version', $options)) {
                 $headers['Octobat-Version'] = $options['octobat_version'];
             }
