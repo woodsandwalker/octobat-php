@@ -29,9 +29,9 @@ class TaxRegionSetting extends ApiResource
      * @return TaxRegionSetting The updated tax region settings.
      */
 
-    public function unactivate($params = null, $options = null)
+    public function deactivate($params = null, $options = null)
     {
-        $url = $this->instanceUrl() . '/unactivate';
+        $url = $this->instanceUrl() . '/deactivate';
         list($response, $opts) = $this->_request('patch', $url, $params, $options);
         $this->refreshFrom($response, $opts);
         return $this;
